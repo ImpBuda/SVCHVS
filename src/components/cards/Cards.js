@@ -339,7 +339,7 @@ const ItemForm = (props) => {
                     <div className='item_form'>
                         <div className='form_wrapp'>
                             <div className='form_content'>
-                                Точно удалить?
+                              Вы точно хотите удалить?
                             </div>
                             <div className='form_buttons'>
                                 <button

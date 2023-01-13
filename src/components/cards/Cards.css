@@ -1,15 +1,13 @@
 
 .rect {
     margin: 4% 3%;
-    padding: 1.5%;
     border: 1px solid #7b7bbd;
-    border-radius: 1em;
     box-shadow: none;
     width: 250px;
 }
 
 .text_content{
-    margin: 15px 0 15px 0;
+    margin: 15px 0 15px 15px;
     align-self: start;
     display: flex;
     height: 80px;
@@ -38,7 +36,6 @@
 .img>img {
     width: 100%;
     height: 250px;
-    border-radius: 0.5em;
 }
 
 @media (max-width:630px) {
@@ -56,7 +53,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
 }
 
 .item_butt {
@@ -134,8 +131,6 @@
     transition: all 0.3s;
 }
 
-/* /////////////////// ITEM FORM //////////////////////// */
-
 .item_form {
     position: absolute;
     margin: 0 auto;
@@ -196,7 +191,7 @@
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #966cf8;
-
+    outline: none;
 }
 
 @media (max-width:630px) {
