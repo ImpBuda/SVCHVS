@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Montserrat';
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.test{
+  margin: 100px 0 100px 0;
+  font-size: 40px;
+  text-align: center;
+}
