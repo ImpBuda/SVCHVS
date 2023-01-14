@@ -1,5 +1,5 @@
 import React, {createRef, useEffect, useState} from "react";
-import styles from "../../Cards.module.css";
+import "../../Cards.css";
 import ClickAwayListener from "@mui/base/ClickAwayListener";
 import {DELETE_ITEM, UPDATE_ITEM} from "../../../../store/actions";
 import {ItemForm} from "../item-form/ItemForm";
@@ -44,7 +44,7 @@ export const CardArea = (props) => {
     }
 
     return (
-        <div className={styles.content}>
+        <div className='content'>
             <ClickAwayListener onClickAway={() => {
                 setHighlightItem({
                     id: props.id,
@@ -55,28 +55,28 @@ export const CardArea = (props) => {
                 <div
                     ref={rectRef}
                     style={rectStyle}
-                    className={styles.rect}
+                    className='rect'
                     onClick={() => {
                         changeHighlightOnClick(props.id)
                     }}
                 >
-                    <div className={styles.grid_wrapp}>
-                        <div className={styles.img}>
+                    <div className='grid_wrapp'>
+                        <div className='img'>
                             <img src={`${props.img}`} alt=""/>
                         </div>
-                        <div className={styles.text_content}>
-                            <div className={styles.title}>
+                        <div className='text_content'>
+                            <div className='title'>
                                 Название: {props.name}
                             </div>
-                            <div className={styles.price}>
+                            <div className='price'>
                                 Цена: {props.price}
                             </div>
-                            <div className={styles.count}>
+                            <div className='count'>
                                 Количество: {props.count}
                             </div>
                         </div>
-                        <div className={styles.item_buttons}>
-                            <button className={styles.item_butt}
+                        <div className='item_buttons'>
+                            <button className='item_butt'
                                     onClick={() => {
                                         setShow(true)
                                         setAction(UPDATE_ITEM)
@@ -84,7 +84,7 @@ export const CardArea = (props) => {
                             >
                                 Обновить
                             </button>
-                            <button className={styles.item_butt}
+                            <button className='item_butt'
                                     onClick={() => {
                                         setShow(true)
                                         setAction(DELETE_ITEM)

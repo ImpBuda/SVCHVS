@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import styles from "../../Cards.module.css";
+import "../../Cards.css";
 import {ADD_ITEM} from "../../../../store/actions";
 import {useAddProductMutation, useGetProductsQuery} from "../../../../store/product/product.api";
 import {CardArea} from "../card-area/CardArea";
@@ -10,12 +10,11 @@ export const Cards = () => {
 
     const [show, setShow] = useState(false)
 
-    //чтобы менялось нормально
     const [action, setAction] = useState()
 
     return (
-        <>
-            <div className="wrapper_cards">
+        <div className='board'>
+            <div className="wrapper">
                 {(areProductsLoading || isFetching) && <p className="text-center">Loading...</p>}
                 {(!areProductsLoading && !isFetching) && products.map((item) =>
                     <CardArea
@@ -29,8 +28,16 @@ export const Cards = () => {
                 )}
 
             </div>
-            <div className={styles.button}>
-                <button
+
+            <ItemForm
+                action={action}
+                show={show}
+                onClose={() => {
+                    setShow(false)
+                }}
+            />
+            <div className='button'>
+                <button className="add"
                     onClick={() => {
                         setShow(true)
                         setAction(ADD_ITEM)
@@ -39,13 +46,6 @@ export const Cards = () => {
                     Добавить
                 </button>
             </div>
-            <ItemForm
-                action={action}
-                show={show}
-                onClose={() => {
-                    setShow(false)
-                }}
-            />
-        </>
+        </div>
     )
 }

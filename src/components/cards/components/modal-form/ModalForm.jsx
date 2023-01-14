@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import styles from "../../Cards.module.css";
+import "../../Cards.css";
 import {validateIntValue, validateStringValue, validateUrl} from "./Validation";
 
 export function ModalForm({product, onClose, afterClickSubmitButton, buttonText}) {
@@ -45,9 +45,9 @@ export function ModalForm({product, onClose, afterClickSubmitButton, buttonText}
 
 
     return (
-        <div className={styles.item_form}>
-            <div className={styles.form_wrapp}>
-                <div className={styles.form_content}>
+        <div className='item_form'>
+            <div className='form_wrapp'>
+                <div className='form_content'>
                     <input type="text"
                            placeholder='Название'
                            value={inputName}
@@ -88,7 +88,7 @@ export function ModalForm({product, onClose, afterClickSubmitButton, buttonText}
                            }}
                     />
                 </div>
-                <div className={styles.form_buttons}>
+                <div className='form_buttons'>
                     <button
                         disabled={!isNameValid || !isPriceValid || !isImgValid || !isCountValid}
                         onClick={clickSubmit}

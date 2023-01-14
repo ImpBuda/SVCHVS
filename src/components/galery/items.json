@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "name": "Идиот",
+    "price": 10,
+    "img": "https://fkniga.ru/media/product/04/040404/KA-00294261.jpg",
+    "count": 2
+  },
+  {
+    "id": 1,
+    "name": "Триумфальная арка",
+    "price": 11,
+    "img": "https://cdn1.ozone.ru/s3/multimedia-8/6338699276.jpg",
+    "count": 3
+  },
+  {
+    "id": 1,
+    "name": "Триумфальная арка",
+    "price": 11,
+    "img": "https://cdn1.ozone.ru/s3/multimedia-8/6338699276.jpg",
+    "count": 3
+  },
+  {
+    "id": 1,
+    "name": "Триумфальная арка",
+    "price": 11,
+    "img": "https://cdn1.ozone.ru/s3/multimedia-8/6338699276.jpg",
+    "count": 3
+  },
+  {
+    "id": 2,
+    "name": "12 стульев",
+    "price": 13,
+    "img": "https://avatars.mds.yandex.net/get-mpic/4303516/img_id4206252461271546836.jpeg/orig",
+    "count": 4
+  }
+]

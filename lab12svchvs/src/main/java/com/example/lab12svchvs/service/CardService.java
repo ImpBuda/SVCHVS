@@ -1,6 +1,6 @@
 package com.example.lab12svchvs.service;
 
-import com.example.lab12svchvs.model.Cards;
+import com.example.lab12svchvs.model.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -9,11 +9,11 @@ import java.util.Optional;
 @Repository
 public interface CardService {
 
-    List<Cards> findAll();
+    List<Product> findAll();
 
-    void save(Cards cards);
+    void save(Product cards);
 
-    Optional<Cards> findById(Long aLong);
+    Optional<Product> findById(Long aLong);
 
-    void delete(Cards cards);
+    void delete(Product product);
 }

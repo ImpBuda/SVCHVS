@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "../../Cards.module.css";
+import "../../Cards.css";
 
 
 export function ModalDelete({onClose, onDelete}) {
     return (
-        <div className={styles.item_form}>
-            <div className={styles.form_wrapp}>
-                <div className={styles.form_content}>
-                    Точно удалить?
+        <div className='item_form'>
+            <div className='form_wrapp'>
+                <div className='form_content'>
+                   Вы точно хотите удалить?
                 </div>
-                <div className={styles.form_buttons}>
+                <div className='form_buttons'>
                     <button
                         onClick={onDelete}
                     >

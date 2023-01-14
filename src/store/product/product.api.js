@@ -3,7 +3,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 export const productApi = createApi({
 
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:8090/api/cards",
+        baseUrl: "http://localhost:8090/api/product",
     }),
     tagTypes: ["Product"],
     endpoints: (build) => ({

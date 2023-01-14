@@ -1,7 +1,7 @@
 package com.example.lab12svchvs.controller;
 
 import com.example.lab12svchvs.exception.ResourceNotFoundException;
-import com.example.lab12svchvs.model.Cards;
+import com.example.lab12svchvs.model.Product;
 import com.example.lab12svchvs.service.CardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,32 +15,32 @@ import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/cards")
-@CrossOrigin(origins = "*")
+@RequestMapping("/api/product")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CardController {
 
     private final CardService card;
 
     @GetMapping()
-    public ResponseEntity<List<Cards>> get() {
+    public ResponseEntity<List<Product>> get() {
         return ok(card.findAll());
     }
 
     @PostMapping()
-    public ResponseEntity<Void> save(@Validated @RequestBody Cards cards) {
-        card.save(cards);
+    public ResponseEntity<Void> save(@Validated @RequestBody Product product) {
+        card.save(product);
         return ok().build();
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Cards> update(@PathVariable long id, @RequestBody Cards cards) {
-        Cards updatedCard = card.findById(id)
+    public ResponseEntity<Product> update(@PathVariable long id, @RequestBody Product product) {
+        Product updatedCard = card.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Card not exist with id: " + id));
 
-        updatedCard.setName(cards.getName());
-        updatedCard.setPrice(cards.getPrice());
-        updatedCard.setCount(cards.getCount());
-        updatedCard.setImg(cards.getImg());
+        updatedCard.setName(product.getName());
+        updatedCard.setPrice(product.getPrice());
+        updatedCard.setCount(product.getCount());
+        updatedCard.setImg(product.getImg());
 
         card.save(updatedCard);
 
@@ -49,9 +49,9 @@ public class CardController {
 
     @DeleteMapping("{id}")
     public ResponseEntity<HttpStatus> delete(@PathVariable long id) {
-        Cards cards = card.findById(id)
+        Product product = card.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Card not exist with id: " + id));
-        card.delete(cards);
+        card.delete(product);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
